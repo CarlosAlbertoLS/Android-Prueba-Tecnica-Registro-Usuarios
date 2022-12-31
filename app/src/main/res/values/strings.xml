@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Room Application</string>
+    <string name="login">Acceso</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="getInTo">Ingresar</string>
+    <string name="register">Registrar</string>
+    <string name="wellcome">Bienvenido</string>
+    <string name="age">Edad</string>
+    <string name="birthday">Fecha de Nacimiento</string>
+    <string name="logOut">Cerrar sesión</string>
+    <string name="registerActivity">Registro</string>
+    <string name="picture">Subir Foto</string>
+    <string name="save">Guardar</string>
+    <string name="error">Error</string>
+    <string name="errorLogin">El usuario o la contraseña no coinciden</string>
+    <string name="ok">aceptar</string>
+</resources>
