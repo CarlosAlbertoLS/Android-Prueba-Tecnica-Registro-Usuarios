@@ -46,7 +46,7 @@ class RegisterActivity : AppCompatActivity() {
         val birthday = binding.registerBirthday.text.toString()
         val password = binding.registerPassword.text.toString()
         if (inputCheck(userName,age)){
-            val user = User(0, userName, age.toInt(), birthday,password)
+            val user = User(0, userName, age.toInt(), birthday,password, image)
             viewModel.addUser(user)
             Toast.makeText(this, "Successfully added, user $userName password $password", Toast.LENGTH_SHORT).show()
             viewModel.goToLoginActivity(this)

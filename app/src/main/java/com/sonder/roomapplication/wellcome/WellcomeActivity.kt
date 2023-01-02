@@ -1,5 +1,6 @@
 package com.sonder.roomapplication.wellcome
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +22,8 @@ class WellcomeActivity : AppCompatActivity() {
         title = "${getString(R.string.wellcome)} ${user.uppercase()}"
         welcomeViewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
         welcomeViewModel.readUserData.observe(this, Observer { user ->
+            val photo:Bitmap? = user.image
+            binding.welcomePhoto.setImageBitmap(photo)
             binding.welcomeAge.text = user.age.toString()
             binding.welcomeBirthday.text = user.birthday.toString()
         })
