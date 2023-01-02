@@ -15,4 +15,5 @@
     <string name="error">Error</string>
     <string name="errorLogin">El usuario o la contraseña no coinciden</string>
     <string name="ok">aceptar</string>
+    <string name="saludo">Bienvenido</string>
 </resources>

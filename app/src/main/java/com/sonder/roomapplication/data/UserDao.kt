@@ -17,4 +17,5 @@ interface UserDao {
 
     @Query("SELECT EXISTS (SELECT * FROM `user-table` where user=:user and password=:password)")
     suspend fun login(user:String, password: String): Boolean
+
 }

@@ -32,6 +32,7 @@ class LoginViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             if (repository.login(user, password)) {
                 val intent = Intent(context, WellcomeActivity::class.java)
+                intent.putExtra("EXTRA_USER", user)
                 context.startActivity(intent)
             } else {
                 viewModelScope.launch(Dispatchers.Main) {

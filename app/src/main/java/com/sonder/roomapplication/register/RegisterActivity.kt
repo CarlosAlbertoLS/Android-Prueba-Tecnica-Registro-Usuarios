@@ -17,6 +17,7 @@ import com.sonder.roomapplication.databinding.ActivityRegisterBinding
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
     private val viewModel: RegisterViewModel by viewModels()
+    private lateinit var registerViewModel: RegisterViewModel
     private lateinit var image: Bitmap
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
