@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Room Application</string>
+    <string name="login">Login</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="getInTo">Login</string>
+    <string name="register">Register</string>
+    <string name="wellcome">Welcome</string>
+    <string name="age">Age</string>
+    <string name="birthday">Birthday</string>
+    <string name="logOut">Log Out</string>
+    <string name="registerActivity">Registration</string>
+    <string name="picture">Picture</string>
+    <string name="save">Save</string>
+    <string name="error">Error</string>
+    <string name="errorLogin">The username or password does not match</string>
+    <string name="ok">Accept</string>
+    <string name="saludo">Welcome</string>
+</resources>
