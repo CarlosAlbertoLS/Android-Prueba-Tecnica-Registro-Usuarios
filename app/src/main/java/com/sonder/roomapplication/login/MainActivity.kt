@@ -1,9 +1,13 @@
 package com.sonder.roomapplication.login
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.sonder.roomapplication.R
 import com.sonder.roomapplication.databinding.ActivityMainBinding
 //TODO CORREGIR LOS EDIT TEXT PARA QUE SOLO SEA UNA LINEA ✔️
 //TODO DISEAR LA PANTALLA WELCOME ✔
@@ -21,9 +25,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val userName : String= intent.extras?.getString("UserName") ?: ""
+
         binding.btnRegister.setOnClickListener { viewModel.goToRegisterActivity(this) }
 
         binding.btnLogin.setOnClickListener { login() }
+
+        binding.btnUsers.setOnClickListener { viewModel.goToGetUsers(this) }
+
+        userRegister(userName)
+    }
+
+    private fun userRegister(userName: String) {
+        if (!userName.isNullOrBlank()){
+            binding.loginUser.setText(userName)
+            binding.btnLogin.background.setTint(ContextCompat.getColor(this, R.color.buttonLogin))
+        }
     }
 
     private fun login() {

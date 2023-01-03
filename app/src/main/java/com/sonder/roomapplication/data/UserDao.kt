@@ -13,7 +13,10 @@ interface UserDao {
     suspend fun addUser(user: User)
 
     @Query("SELECT * FROM `user-table`")
-    fun readAllData(): LiveData<User>
+    fun readAllData(): LiveData<List<User>>
+
+    @Query("SELECT * FROM `user-table`")
+    fun readAllDataUser(): LiveData<User>
 
     @Query("SELECT EXISTS (SELECT * FROM `user-table` where user=:user and password=:password)")
     suspend fun login(user:String, password: String): Boolean

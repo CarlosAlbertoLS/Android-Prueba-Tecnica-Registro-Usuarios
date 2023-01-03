@@ -49,7 +49,7 @@ class RegisterActivity : AppCompatActivity() {
             val user = User(0, userName, age.toInt(), birthday,password, image)
             viewModel.addUser(user)
             Toast.makeText(this, "Successfully added, user $userName password $password", Toast.LENGTH_SHORT).show()
-            viewModel.goToLoginActivity(this)
+            viewModel.goToLoginActivity(this, userName)
         }else{
             Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
         }

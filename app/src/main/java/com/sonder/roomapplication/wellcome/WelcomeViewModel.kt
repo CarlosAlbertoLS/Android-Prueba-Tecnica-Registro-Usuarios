@@ -26,7 +26,7 @@ class WelcomeViewModel(application: Application): AndroidViewModel(application) 
     init {
         val userDao = UserDataBase.getDatabase(application).userDao()
         repository = UserRepository(userDao)
-        readUserData = repository.readAllData
+        readUserData = repository.readAllDataUser
     }
 
     fun goToHome(context: Context) = context.startActivity(Intent(context, MainActivity::class.java))

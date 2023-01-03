@@ -3,7 +3,8 @@ package com.sonder.roomapplication.data
 import androidx.lifecycle.LiveData
 
 class UserRepository(private val userDao: UserDao) {
-    val readAllData: LiveData<User> = userDao.readAllData()
+    val readAllData: LiveData<List<User>> = userDao.readAllData()
+    val readAllDataUser: LiveData<User> = userDao.readAllDataUser()
 
     suspend fun addUser(user: User){
         userDao.addUser(user)

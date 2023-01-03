@@ -4,12 +4,15 @@ import android.app.AlertDialog
 import android.app.Application
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.sonder.roomapplication.R
 import com.sonder.roomapplication.data.UserDataBase
 import com.sonder.roomapplication.data.UserRepository
 import com.sonder.roomapplication.register.RegisterActivity
+import com.sonder.roomapplication.users.UsersActivity
 import com.sonder.roomapplication.wellcome.WellcomeActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -45,4 +48,6 @@ class LoginViewModel(application: Application): AndroidViewModel(application) {
             }
         }
     }
+
+    fun goToGetUsers(context: Context) = context.startActivity(Intent(context, UsersActivity::class.java))
 }

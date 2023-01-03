@@ -16,4 +16,5 @@
     <string name="errorLogin">El usuario o la contraseña no coinciden</string>
     <string name="ok">aceptar</string>
     <string name="saludo">Bienvenido</string>
+    <string name="getUsers">Usuarios Registrados</string>
 </resources>
