@@ -27,11 +27,16 @@ class MainActivity : AppCompatActivity() {
 
         val userName : String= intent.extras?.getString("UserName") ?: ""
 
-        binding.btnRegister.setOnClickListener { viewModel.goToRegisterActivity(this) }
+        binding.btnRegister.setOnClickListener {
+            viewModel.goToRegisterActivity(this)
+            finish()
+        }
 
         binding.btnLogin.setOnClickListener { login() }
 
-        binding.btnUsers.setOnClickListener { viewModel.goToGetUsers(this) }
+        binding.btnUsers.setOnClickListener {
+            viewModel.goToGetUsers(this)
+        }
 
         userRegister(userName)
     }
@@ -44,10 +49,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun login() {
-        val user = binding.loginUser.text.toString()
-        val password = binding.loginPassword.text.toString()
+        var user = binding.loginUser.text.toString()
+        var password = binding.loginPassword.text.toString()
         if (!(user.isNullOrBlank() || password.isNullOrBlank())){
             viewModel.login(user,password, this)
+            binding.loginUser.setText("")
+            binding.loginPassword.setText("")
             Toast.makeText(this,"$user, $password", Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(this,"debes llenar todos los campos", Toast.LENGTH_SHORT).show()

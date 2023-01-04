@@ -50,6 +50,7 @@ class RegisterActivity : AppCompatActivity() {
             viewModel.addUser(user)
             Toast.makeText(this, "Successfully added, user $userName password $password", Toast.LENGTH_SHORT).show()
             viewModel.goToLoginActivity(this, userName)
+            finish()
         }else{
             Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show()
         }
